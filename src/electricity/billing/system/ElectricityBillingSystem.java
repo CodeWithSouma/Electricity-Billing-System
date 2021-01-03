@@ -10,7 +10,8 @@ public class ElectricityBillingSystem {
 
    
     public static void main(String[] args) {
-        Conn connection = new Conn();
+        SplashScreen.start();
+        
     }
     
 }
