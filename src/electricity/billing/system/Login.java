@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package electricity.billing.system;
 
 import java.awt.BorderLayout;
@@ -16,6 +11,7 @@ import java.sql.*;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
@@ -105,7 +101,35 @@ public class Login extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent ae) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+          if(ae.getSource() == loginButton){
+            try{        
+                Conn conn = new Conn();
+                String username  = usernameTextField.getText();
+                String password  = passwordField.getText();
+                String user = choice.getSelectedItem();
+                String query  = "select * from login where username = '"+username+"' and password = '"+password+"' and user = '"+user+"'";
+                ResultSet resultSet = conn.statement.executeQuery(query);
+                if(resultSet.next()){
+//                    String meter = rs.getString("meter_no");
+//                    new Project(meter, user).setVisible(true);
+//                    this.setVisible(false);
+
+                }else{
+                    JOptionPane.showMessageDialog(null, "Invalid login");
+                    usernameTextField.setText("");
+                    passwordField.setText("");
+                }
+            }catch(Exception e){
+                e.printStackTrace();
+                System.out.println("error: "+e);
+            }
+        }else if(ae.getSource() == cancelButton){
+            this.setVisible(false);
+        }else if(ae.getSource() == signupButton){
+              dispose();
+//            new Signup().setVisible(true);
+            
+        }
     }
     
     

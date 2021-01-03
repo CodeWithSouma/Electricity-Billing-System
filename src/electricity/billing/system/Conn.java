@@ -9,8 +9,8 @@ import java.sql.*;
  * 
  */
 public class Conn {
-    private Connection c;
-    private Statement s;
+    private Connection connection;
+    public Statement statement;
     
     private final String DATABASE_NAME = "ebs";
     private final String CONNECTION_URL = "jdbc:mysql:///"+DATABASE_NAME;
@@ -20,8 +20,8 @@ public class Conn {
     public Conn(){
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            c = DriverManager.getConnection(CONNECTION_URL,USER_NAME,PASSWORD);
-            s = c.createStatement();
+            connection = DriverManager.getConnection(CONNECTION_URL,USER_NAME,PASSWORD);
+            statement = connection.createStatement();
             System.out.println("Successfully connected with "+DATABASE_NAME+" database...!!!");
         } catch (ClassNotFoundException | SQLException ex) {
            ex.printStackTrace();
