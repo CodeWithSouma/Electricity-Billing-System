@@ -24,7 +24,7 @@ public class Conn {
             s = c.createStatement();
             System.out.println("Successfully connected with "+DATABASE_NAME+" database...!!!");
         } catch (ClassNotFoundException | SQLException ex) {
-            System.out.println(ex);
+           ex.printStackTrace();
         }
         
     }
