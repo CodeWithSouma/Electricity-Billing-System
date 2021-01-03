@@ -17,7 +17,6 @@ public class SplashScreen {
         SplashFrame splashFrame = new SplashFrame();
         splashFrame.setVisible(true);
         displaySplashAnimation(splashFrame);
-
     }
 
     private static void displaySplashAnimation(SplashFrame frame) {
@@ -63,7 +62,9 @@ class SplashFrame extends JFrame implements Runnable {
             Thread.sleep(7000);
             this.dispose();
 
-            //TODO:here we link another window
+            Login loginFrame = new Login();
+            loginFrame.setVisible(true);
+            
         } catch (Exception e) {
             e.printStackTrace();
         }

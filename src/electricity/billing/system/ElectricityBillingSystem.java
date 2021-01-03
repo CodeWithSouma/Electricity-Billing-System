@@ -10,7 +10,8 @@ public class ElectricityBillingSystem {
 
    
     public static void main(String[] args) {
-        SplashScreen.start();
+        SplashScreen splashScreen = new SplashScreen();
+        splashScreen.start();
         
     }
     
