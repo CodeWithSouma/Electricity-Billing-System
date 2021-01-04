@@ -13,7 +13,7 @@ import javax.swing.JLabel;
  */
 public class SplashScreen {
 
-    public static void start() {
+    public void start() {
         SplashFrame splashFrame = new SplashFrame();
         splashFrame.setVisible(true);
         displaySplashAnimation(splashFrame);
