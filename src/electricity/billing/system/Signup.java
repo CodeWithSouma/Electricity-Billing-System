@@ -127,11 +127,17 @@ public class Signup extends JFrame implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent ae){
         if(ae.getSource() == createButton){
-            String username = usernameTextField.getText();
-            String name = nameTextField.getText();
-            String password = passwordField.getText();
+            String username = usernameTextField.getText().trim();
+            String name = nameTextField.getText().trim();
+            String password = passwordField.getText().trim();
             String user = chooseAccount.getSelectedItem();
-            String meter = meterNumberTextField.getText();
+            String meter = meterNumberTextField.getText().trim();
+            
+            if(!validate(username,name,password)){
+                JOptionPane.showMessageDialog(null, "Please fill all the field");
+                return;
+            }
+            
             try{
                 Conn connection = new Conn();
                 String query = null;
@@ -146,18 +152,24 @@ public class Signup extends JFrame implements ActionListener{
                 this.setVisible(false);
                 new Login().setVisible(true);
             }catch(HeadlessException | SQLException e){
-                
+                e.printStackTrace();
             }
+       
         } else if(ae.getSource()== backButton){
-            this.setVisible(false);
+           this.dispose();
             new Login().setVisible(true);
         }
     }
     
+     private boolean validate(String username, String name, String password) {
+         return !(username.equals("") || name.equals("") || password.equals(""));
+    }
+
         
     public static void main(String[] args){
         new Signup().setVisible(true);
     }
 
+   
     
 }
