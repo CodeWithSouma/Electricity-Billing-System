@@ -141,7 +141,7 @@ public class NewCustomer extends JFrame implements ActionListener {
                 connection.statement.executeUpdate(query2);
                 JOptionPane.showMessageDialog(null, "Customer Details Added Successfully");
                 this.setVisible(false);
-                //new MeterInfo(meter).setVisible(true);
+                new MeterInfo(meter).setVisible(true);
 
             } catch (HeadlessException | SQLException ex) {
                 ex.printStackTrace();
