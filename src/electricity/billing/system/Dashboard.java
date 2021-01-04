@@ -262,13 +262,13 @@ public class Dashboard  extends JFrame implements ActionListener{
         setLayout(new FlowLayout());
         setVisible(false);
     }
-    public void actionPerformed(ActionEvent ae){
-        String menuItem = ae.getActionCommand();
-        if(menuItem.equals("Customer Details")){
-//            new CustomerDetails().setVisible(true);
+    public void actionPerformed(ActionEvent events){
+        String menuItem = events.getActionCommand();
+        if(menuItem.equals("New Customer")){
+            new NewCustomer().setVisible(true);
             
-        }else if(menuItem.equals("New Customer")){
-//            new NewCustomer().setVisible(true);
+        }else if(menuItem.equals("Customer Details")){
+//            new CustomerDetails().setVisible(true);
             
         }else if(menuItem.equals("Calculate Bill")){
 //            new CalculateBill().setVisible(true);
