@@ -7,6 +7,12 @@ import javax.swing.*;
 import java.sql.*;
 import java.util.*;
 
+/**
+ * @author souma (SMIT)
+ * @version v1.0
+ *
+ */
+
 public class MeterInfo extends JFrame implements ActionListener{
     JLabel meterNumberHeadingLabel,meterLocationLabel,meterTypeLabel,billTypeLabel,phaseCodeLabel,daysHeadingLabel,noteHeadingLabel,meterInfoImageLabel,daysLabel, noteLabel, meterNumberLabel;
     Choice meterLocationChooser, meterTypeChooser, phaseCodeChooser,billTypeChooser, c5;
