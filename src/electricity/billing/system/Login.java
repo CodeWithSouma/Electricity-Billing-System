@@ -3,6 +3,7 @@ package electricity.billing.system;
 import java.awt.BorderLayout;
 import java.awt.Choice;
 import java.awt.Color;
+import java.awt.HeadlessException;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -110,7 +111,7 @@ public class Login extends JFrame implements ActionListener {
                 String query  = "select * from login where username = '"+username+"' and password = '"+password+"' and user = '"+user+"'";
                 ResultSet resultSet = conn.statement.executeQuery(query);
                 if(resultSet.next()){
-//                    String meter = rs.getString("meter_no");
+                    String meter = resultSet.getString("meter_no");
 //                    new Project(meter, user).setVisible(true);
 //                    this.setVisible(false);
 
@@ -119,15 +120,14 @@ public class Login extends JFrame implements ActionListener {
                     usernameTextField.setText("");
                     passwordField.setText("");
                 }
-            }catch(Exception e){
-                e.printStackTrace();
+            }catch(HeadlessException | SQLException e){
                 System.out.println("error: "+e);
             }
         }else if(ae.getSource() == cancelButton){
             this.setVisible(false);
         }else if(ae.getSource() == signupButton){
-              dispose();
-//            new Signup().setVisible(true);
+              this.dispose();
+            new Signup().setVisible(true);
             
         }
     }
