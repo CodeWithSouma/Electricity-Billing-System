@@ -6,6 +6,12 @@ import java.awt.event.*;
 import javax.swing.*;
 import java.sql.*;
 
+/**
+ * @author souma (SMIT)
+ * @version v1.0
+ *
+ */
+
 public class CalculateBill extends JFrame implements ActionListener{
     JLabel calculateElectricBillLabel,meterNumberLabel,unitsConsumedLabel,calculateBillBannerLabel,monthLabel;
     JTextField monthTextField;
@@ -158,12 +164,12 @@ public class CalculateBill extends JFrame implements ActionListener{
                 c1.statement.executeUpdate(query);
                 JOptionPane.showMessageDialog(null,"Customer Bill Updated Successfully");
                 this.setVisible(false);
-            }catch(Exception aee){
-                aee.printStackTrace();
+            }catch(HeadlessException | SQLException e){
+                e.printStackTrace();
             }
 
         }else if(events.getSource()== cancelButton){
-            this.setVisible(false);
+            this.dispose();
         }        
     }
     
