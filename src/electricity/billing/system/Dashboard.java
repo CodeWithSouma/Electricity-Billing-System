@@ -274,7 +274,7 @@ public class Dashboard  extends JFrame implements ActionListener{
             new CalculateBill().setVisible(true);
             
         }else if(menuItem.equals("Pay Bill")){
-//            new PayBill(meter).setVisible(true);
+            new PayBill(meter).setVisible(true);
            
         }else if(menuItem.equals("Notepad")){
             try{
@@ -292,8 +292,7 @@ public class Dashboard  extends JFrame implements ActionListener{
             this.setVisible(false);
             new Login().setVisible(true);
         }else if(menuItem.equals("Generate Bill")){
-//            new GenerateBill(meter).setVisible(true);
-            
+//            new GenerateBill(meter).setVisible(true);     
         }else if(menuItem.equals("Deposit Details")){
 //            new DepositDetails().setVisible(true);
         }else if(menuItem.equals("View Information")){
