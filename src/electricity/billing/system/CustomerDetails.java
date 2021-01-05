@@ -1,11 +1,11 @@
 
 package electricity.billing.system;
 
-import java.awt.*;
 import java.awt.event.*;
 import java.awt.print.PrinterException;
 import javax.swing.*;
 import java.sql.*;
+import net.proteanit.sql.DbUtils;
 
 /**
  * @author souma (SMIT)
@@ -17,9 +17,7 @@ public class CustomerDetails extends JFrame implements ActionListener{
  
     JTable customerTable;
     JButton printButton;
-    String x[] = {"Customer Name","Meter Number","Address","City","State","Email","Phone"};
-    String y[][] = new String[40][8];
-    int i=0, j=0;
+   
     CustomerDetails(){
         super("Customer Details");
         setSize(1200,650);
@@ -29,18 +27,7 @@ public class CustomerDetails extends JFrame implements ActionListener{
             Conn connection  = new Conn();
             String query = "select * from customer";
             ResultSet resultSet  = connection.statement.executeQuery(query);
-            while(resultSet.next()){
-                y[i][j++]=resultSet.getString("name");
-                y[i][j++]=resultSet.getString("meter");
-                y[i][j++]=resultSet.getString("address");
-                y[i][j++]=resultSet.getString("city");
-                y[i][j++]=resultSet.getString("state");
-                y[i][j++]=resultSet.getString("email");
-                y[i][j++]=resultSet.getString("phone");
-                i++;
-                j=0;
-            }
-            customerTable = new JTable(y,x);
+            customerTable = new JTable(DbUtils.resultSetToTableModel(resultSet));
             
         }catch(SQLException e){
             e.printStackTrace();
