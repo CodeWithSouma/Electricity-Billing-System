@@ -16,8 +16,6 @@ import java.sql.*;
 public class PayBill extends JFrame implements ActionListener {
 
     JLabel meterNoHeadingLabel, monthLabel, unitsHeadingLabel, totalBillHeadingLabel, statusHeadingLabel;
-//    JLabel l11, l12, l13, l14, l15;
-//    JTextField t1;
     Choice monthChooser;
     JButton payButton, backButton;
     String meter;
@@ -174,7 +172,7 @@ public class PayBill extends JFrame implements ActionListener {
         if (Desktop.isDesktopSupported()) {
             Desktop desktop = Desktop.getDesktop();
             try {
-                URI uri = new URI("http://www.paytm.com");
+                URI uri = new URI("https://paytm.com/electricity-bill-payment");
                 desktop.browse(uri);
             } catch (IOException | URISyntaxException ex) {
                 ex.printStackTrace();
