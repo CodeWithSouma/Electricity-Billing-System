@@ -271,7 +271,7 @@ public class Dashboard  extends JFrame implements ActionListener{
             new CustomerDetails().setVisible(true);
             
         }else if(menuItem.equals("Calculate Bill")){
-//            new CalculateBill().setVisible(true);
+            new CalculateBill().setVisible(true);
             
         }else if(menuItem.equals("Pay Bill")){
 //            new PayBill(meter).setVisible(true);

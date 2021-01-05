@@ -3,6 +3,7 @@ package electricity.billing.system;
 
 import java.awt.*;
 import java.awt.event.*;
+import java.awt.print.PrinterException;
 import javax.swing.*;
 import java.sql.*;
 
@@ -41,7 +42,7 @@ public class CustomerDetails extends JFrame implements ActionListener{
             }
             customerTable = new JTable(y,x);
             
-        }catch(Exception e){
+        }catch(SQLException e){
             e.printStackTrace();
         }
         
@@ -52,10 +53,11 @@ public class CustomerDetails extends JFrame implements ActionListener{
         add(sp);
         printButton.addActionListener(this);
     }
+    @Override
     public void actionPerformed(ActionEvent ae){
         try{
             customerTable.print();
-        }catch(Exception e){}
+        }catch(PrinterException e){}
     }
     
     public static void main(String[] args){
