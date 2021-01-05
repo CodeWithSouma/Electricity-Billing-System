@@ -7,6 +7,13 @@ import java.awt.*;
 import java.sql.*;
 import java.awt.event.*;
 
+/**
+ * @author souma (SMIT)
+ * @version v1.0
+ *
+ */
+
+
 public class UpdateProfile extends JFrame implements ActionListener{
     JTextField addressTextField, cityTextField, stateTextField, emailTextField, phoneTextField, t6, t7;
     JLabel nameLabel, meterNumberLabel;
