@@ -176,9 +176,7 @@ public class PayBill extends JFrame implements ActionListener {
             try {
                 URI uri = new URI("http://www.paytm.com");
                 desktop.browse(uri);
-            } catch (IOException ex) {
-                ex.printStackTrace();
-            } catch (URISyntaxException ex) {
+            } catch (IOException | URISyntaxException ex) {
                 ex.printStackTrace();
             }
         }
