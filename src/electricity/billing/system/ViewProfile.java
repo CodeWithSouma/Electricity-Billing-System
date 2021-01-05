@@ -13,9 +13,9 @@ import java.awt.event.*;
  */
 
 
-public class ViewInformation extends JFrame implements ActionListener{
+public class ViewProfile extends JFrame implements ActionListener{
     
-    ViewInformation(String meter){
+    ViewProfile(String meter){
         setBounds(600,250, 850, 650);
         getContentPane().setBackground(Color.WHITE);
         setLayout(null);
@@ -104,7 +104,7 @@ public class ViewInformation extends JFrame implements ActionListener{
         backButton.addActionListener(this);
         add(backButton);
         
-        ImageIcon viewCustomerBannerIcon = new ImageIcon(ViewInformation.class.getResource("icon/viewcustomer.jpg"));
+        ImageIcon viewCustomerBannerIcon = new ImageIcon(ViewProfile.class.getResource("icon/viewcustomer.jpg"));
         Image viewCustomerBannerImage = viewCustomerBannerIcon.getImage().getScaledInstance(600, 300, Image.SCALE_DEFAULT);
         viewCustomerBannerIcon = new ImageIcon(viewCustomerBannerImage);
         JLabel viewCustomerBannerImageLabel  = new JLabel(viewCustomerBannerIcon);
@@ -118,6 +118,6 @@ public class ViewInformation extends JFrame implements ActionListener{
     }
     
     public static void main(String[] args){
-        new ViewInformation("").setVisible(true);
+        new ViewProfile("").setVisible(true);
     }
 }

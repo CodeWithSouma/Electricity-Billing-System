@@ -80,7 +80,7 @@ public class Dashboard extends JFrame implements ActionListener {
         /* Second Column */
         JMenu info = new JMenu("Information");
         JMenuItem updateInfo = new JMenuItem("Update Information");
-        JMenuItem viewInfo = new JMenuItem("View Information");
+        JMenuItem viewInfo = new JMenuItem("View profile");
 
         info.setForeground(Color.RED);
 
@@ -288,11 +288,11 @@ public class Dashboard extends JFrame implements ActionListener {
             case "Deposit Details":
                 new DepositDetails().setVisible(true);
                 break;
-            case "View Information":
-                new ViewInformation(meter).setVisible(true);
+            case "View profile":
+                new ViewProfile(meter).setVisible(true);
                 break;
             case "Update Information":
-                new UpdateInformation(meter).setVisible(true);
+                new UpdateProfile(meter).setVisible(true);
                 break;
             case "Bill Details":
 //            new BillDetails(meter).setVisible(true);

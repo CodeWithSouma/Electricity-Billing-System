@@ -7,12 +7,12 @@ import java.awt.*;
 import java.sql.*;
 import java.awt.event.*;
 
-public class UpdateInformation extends JFrame implements ActionListener{
+public class UpdateProfile extends JFrame implements ActionListener{
     JTextField addressTextField, cityTextField, stateTextField, emailTextField, phoneTextField, t6, t7;
     JLabel nameLabel, meterNumberLabel;
     JButton updateButton, backButton;
     String meter;
-    UpdateInformation(String meter){
+    UpdateProfile(String meter){
         this.meter = meter;
         
         setBounds(500, 220, 1050, 450);
@@ -109,7 +109,7 @@ public class UpdateInformation extends JFrame implements ActionListener{
             }
         }catch(SQLException e){}
         
-        ImageIcon updateInformationBannerIcon = new ImageIcon(UpdateInformation.class.getResource("icon/update.jpg"));
+        ImageIcon updateInformationBannerIcon = new ImageIcon(UpdateProfile.class.getResource("icon/update.jpg"));
         Image i2  = updateInformationBannerIcon.getImage().getScaledInstance(400, 300, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
         JLabel l8  = new JLabel(i3);
@@ -140,7 +140,7 @@ public class UpdateInformation extends JFrame implements ActionListener{
     }
     
     public static void main(String[] args){
-        new UpdateInformation("").setVisible(true);
+        new UpdateProfile("").setVisible(true);
         
     }
 }
