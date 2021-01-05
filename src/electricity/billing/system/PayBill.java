@@ -15,10 +15,10 @@ import java.sql.*;
  */
 public class PayBill extends JFrame implements ActionListener {
 
-    JLabel meterNoHeadingLabel, l2, monthLabel, unitsHeadingLabel, totalBillHeadingLabel, statusHeadingLabel;
-    JLabel l11, l12, l13, l14, l15;
-    JTextField t1;
-    Choice monthChooser, c2;
+    JLabel meterNoHeadingLabel, monthLabel, unitsHeadingLabel, totalBillHeadingLabel, statusHeadingLabel;
+//    JLabel l11, l12, l13, l14, l15;
+//    JTextField t1;
+    Choice monthChooser;
     JButton payButton, backButton;
     String meter;
 
