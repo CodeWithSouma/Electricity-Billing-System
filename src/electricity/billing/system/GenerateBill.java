@@ -7,6 +7,12 @@ import java.awt.event.*;
 import javax.swing.*;
 import java.sql.*;
 
+/**
+ * @author souma (SMIT)
+ * @version v1.0
+ *
+ */
+
 public class GenerateBill extends JFrame implements ActionListener{
     JLabel generateBillLabel, meterNumberLabel;
     JTextArea billTextArea;
