@@ -6,6 +6,12 @@ import java.awt.*;
 import java.sql.*;
 import java.awt.event.*;
 
+/**
+ * @author souma (SMIT)
+ * @version v1.0
+ *
+ */
+
 
 public class ViewInformation extends JFrame implements ActionListener{
     

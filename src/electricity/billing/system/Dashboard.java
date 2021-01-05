@@ -292,7 +292,7 @@ public class Dashboard extends JFrame implements ActionListener {
                 new ViewInformation(meter).setVisible(true);
                 break;
             case "Update Information":
-//            new UpdateInformation(meter).setVisible(true);
+                new UpdateInformation(meter).setVisible(true);
                 break;
             case "Bill Details":
 //            new BillDetails(meter).setVisible(true);
