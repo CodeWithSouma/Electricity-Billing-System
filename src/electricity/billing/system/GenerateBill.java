@@ -100,12 +100,12 @@ public class GenerateBill extends JFrame implements ActionListener{
             if(resultSet.next()){
                 billTextArea.append("---------------------------------------------------------------");
                 billTextArea.append("\n\n");
-                billTextArea.append("\n Cost per Unit:             Rs "+resultSet.getString("cost_per_unit"));
-                billTextArea.append("\n Meter Rent:                Rs "+resultSet.getString("meter_rent"));
-                billTextArea.append("\n Service Charge:            Rs "+resultSet.getString("service_charge"));
-                billTextArea.append("\n Service Tax:               Rs "+resultSet.getString("service_tax"));
-                billTextArea.append("\n Swacch Bharat Cess:        Rs "+resultSet.getString("swacch_bharat_cess"));
-                billTextArea.append("\n Fixed Tax:                 Rs "+resultSet.getString("fixed_tax"));
+                billTextArea.append("\n    Cost per Unit:             Rs "+resultSet.getString("cost_per_unit"));
+                billTextArea.append("\n    Meter Rent:                Rs "+resultSet.getString("meter_rent"));
+                billTextArea.append("\n    Service Charge:            Rs "+resultSet.getString("service_charge"));
+                billTextArea.append("\n    Service Tax:               Rs "+resultSet.getString("service_tax"));
+                billTextArea.append("\n    Swacch Bharat Cess:        Rs "+resultSet.getString("swacch_bharat_cess"));
+                billTextArea.append("\n    Fixed Tax:                 Rs "+resultSet.getString("fixed_tax"));
                 billTextArea.append("\n");
                 
             }
