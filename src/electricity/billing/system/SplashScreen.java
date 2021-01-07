@@ -27,7 +27,7 @@ public class SplashScreen {
             frame.setSize(i+x,i);
             try {
                 Thread.sleep(10);
-            } catch (Exception e) {
+            } catch (InterruptedException e) {
             }
         }
     }
@@ -48,7 +48,7 @@ class SplashFrame extends JFrame implements Runnable {
     }
 
     private void addBackgroundImage() {
-        ImageIcon splashIcon = new ImageIcon(SplashFrame.class.getResource("icon/elect.jpg"));
+        ImageIcon splashIcon = new ImageIcon(SplashFrame.class.getResource("icon/splash_img.jpg"));
         Image splashImage = splashIcon.getImage().getScaledInstance(730, 550, Image.SCALE_DEFAULT);
         splashIcon = new ImageIcon(splashImage);
 
