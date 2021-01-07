@@ -20,18 +20,19 @@ public class MeterInfo extends JFrame implements ActionListener{
     MeterInfo(String meterNumber){
         setLocation(600,200);
         setSize(700,500);
+        this.setResizable(false);
         
         JPanel panel = new JPanel();
         panel.setLayout(null);
-        panel.setBackground(new Color(173,216,230));
+        panel.setBackground(new Color(122, 255, 224));
         
         JLabel headingLabel = new JLabel("Meter Information");
-        headingLabel.setBounds(180, 10, 200, 26);
+        headingLabel.setBounds(180, 10, 220, 26);
         headingLabel.setFont(new Font("Tahoma", Font.PLAIN, 24));
         panel.add(headingLabel);
         
         meterNumberHeadingLabel = new JLabel("Meter Number");
-        meterNumberHeadingLabel.setBounds(100, 80, 100, 20);
+        meterNumberHeadingLabel.setBounds(100, 80, 120, 20);
         
         meterNumberLabel = new JLabel(meterNumber);
         meterNumberLabel.setBounds(240, 80, 200, 20);
@@ -39,7 +40,7 @@ public class MeterInfo extends JFrame implements ActionListener{
         panel.add(meterNumberLabel);
         
         meterLocationLabel = new JLabel("Meter Location");
-        meterLocationLabel.setBounds(100, 120, 100, 20);
+        meterLocationLabel.setBounds(100, 120, 120, 20);
         meterLocationChooser = new Choice();
         meterLocationChooser.add("Outside");
         meterLocationChooser.add("Inside");
@@ -92,27 +93,27 @@ public class MeterInfo extends JFrame implements ActionListener{
         noteHeadingLabel = new JLabel("Note");
         noteHeadingLabel.setBounds(100, 320, 100, 20);
         panel.add(noteHeadingLabel);
-        noteLabel = new JLabel("By Default Bill is calculated for 30 days only");
-        noteLabel.setBounds(240, 320, 300, 20);
+        noteLabel = new JLabel("<html><body>By Default Bill is calculated<br> for 30 days only</body></html>");
+        noteLabel.setBounds(240, 320, 320, 40);
         panel.add(noteLabel);
         
         submitButton = new JButton("Submit");
         submitButton.setBounds(120, 390, 100, 25);
-        submitButton.setBackground(Color.BLACK);
+        submitButton.setBackground(new Color(0,102,27));
         submitButton.setForeground(Color.WHITE);
         panel.add(submitButton);
         
         cancelButton = new JButton("Cancel");
         cancelButton.setBounds(250, 390, 100, 25);
-        cancelButton.setBackground(Color.BLACK);
+        cancelButton.setBackground(Color.RED);
         cancelButton.setForeground(Color.WHITE);
         panel.add(cancelButton);
         
         setLayout(new BorderLayout());
         add(panel,"Center");
         
-        ImageIcon meterInfoIcon = new ImageIcon(MeterInfo.class.getResource("icon/new_customer_icon.jpg"));
-        Image meterInfoImage = meterInfoIcon.getImage().getScaledInstance(150, 300,Image.SCALE_DEFAULT);
+        ImageIcon meterInfoIcon = new ImageIcon(MeterInfo.class.getResource("icon/meter_info_banner.jpg"));
+        Image meterInfoImage = meterInfoIcon.getImage().getScaledInstance(220, 550,Image.SCALE_AREA_AVERAGING);
         meterInfoIcon = new ImageIcon(meterInfoImage);
         meterInfoImageLabel = new JLabel(meterInfoIcon);
         add(meterInfoImageLabel,"West");
