@@ -64,28 +64,28 @@ public class Login extends JFrame implements ActionListener {
         this.add(choice);
         
         ImageIcon loginIcon = new ImageIcon(Login.class.getResource("icon/login.png"));
-        Image loginImage = loginIcon.getImage().getScaledInstance(16, 16,Image.SCALE_DEFAULT);
+        Image loginImage = loginIcon.getImage().getScaledInstance(16, 16,Image.SCALE_SMOOTH);
         loginButton = new JButton("Login", new ImageIcon(loginImage));
         loginButton.setBounds(330, 160, 100, 20);
         this.add(loginButton);
         
         ImageIcon cancelIcon = new ImageIcon(Login.class.getResource("icon/cancel.jpg"));
-        Image cancelImage = cancelIcon.getImage().getScaledInstance(16, 16,Image.SCALE_DEFAULT);
+        Image cancelImage = cancelIcon.getImage().getScaledInstance(16, 16,Image.SCALE_SMOOTH);
         cancelButton = new JButton("Cancel",new ImageIcon(cancelImage));
         cancelButton.setBounds(450, 160, 100, 20);
         this.add(cancelButton);
         
         ImageIcon signupIcon = new ImageIcon(Login.class.getResource("icon/pop.png"));
-        Image signupImage = signupIcon.getImage().getScaledInstance(16, 16,Image.SCALE_DEFAULT);
+        Image signupImage = signupIcon.getImage().getScaledInstance(16, 16,Image.SCALE_SMOOTH);
         signupButton = new JButton("Signup",new ImageIcon(signupImage));
         signupButton.setBounds(380, 200, 130, 20);
         this.add(signupButton);
         
-        ImageIcon profileIcon = new ImageIcon(Login.class.getResource("icon/second.jpg"));
-        Image profileImage = profileIcon.getImage().getScaledInstance(250, 250,Image.SCALE_DEFAULT);
+        ImageIcon profileIcon = new ImageIcon(Login.class.getResource("icon/login_banner.png"));
+        Image profileImage = profileIcon.getImage().getScaledInstance(200, 200,Image.SCALE_SMOOTH);
         profileIcon = new ImageIcon(profileImage);
         leftImageLabel = new JLabel(profileIcon);
-        leftImageLabel.setBounds(0, 0, 250, 250);
+        leftImageLabel.setBounds(5, 5, 250, 250);
         this.add(leftImageLabel);
         
         loginButton.addActionListener(this);
