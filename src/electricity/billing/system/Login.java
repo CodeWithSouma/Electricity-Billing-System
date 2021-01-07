@@ -66,19 +66,19 @@ public class Login extends JFrame implements ActionListener {
         ImageIcon loginIcon = new ImageIcon(Login.class.getResource("icon/login.png"));
         Image loginImage = loginIcon.getImage().getScaledInstance(16, 16,Image.SCALE_SMOOTH);
         loginButton = new JButton("Login", new ImageIcon(loginImage));
-        loginButton.setBounds(330, 160, 100, 20);
+        loginButton.setBounds(330, 160, 110, 25);
         this.add(loginButton);
         
         ImageIcon cancelIcon = new ImageIcon(Login.class.getResource("icon/cancel.jpg"));
         Image cancelImage = cancelIcon.getImage().getScaledInstance(16, 16,Image.SCALE_SMOOTH);
         cancelButton = new JButton("Cancel",new ImageIcon(cancelImage));
-        cancelButton.setBounds(450, 160, 100, 20);
+        cancelButton.setBounds(450, 160, 110, 25);
         this.add(cancelButton);
         
-        ImageIcon signupIcon = new ImageIcon(Login.class.getResource("icon/pop.png"));
+        ImageIcon signupIcon = new ImageIcon(Login.class.getResource("icon/user.png"));
         Image signupImage = signupIcon.getImage().getScaledInstance(16, 16,Image.SCALE_SMOOTH);
         signupButton = new JButton("Signup",new ImageIcon(signupImage));
-        signupButton.setBounds(380, 200, 130, 20);
+        signupButton.setBounds(380, 200, 110, 25);
         this.add(signupButton);
         
         ImageIcon profileIcon = new ImageIcon(Login.class.getResource("icon/login_banner.png"));

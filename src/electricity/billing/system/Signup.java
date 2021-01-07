@@ -22,6 +22,7 @@ public class Signup extends JFrame implements ActionListener{
     }
     
     private void initComponant() {
+        this.setTitle("Create Account");
         setBounds(600, 250, 700, 400);
         
         panel = new JPanel();
@@ -29,7 +30,6 @@ public class Signup extends JFrame implements ActionListener{
         panel.setLayout( null);
         panel.setBackground(Color.WHITE);
         panel.setForeground(new Color(34, 139, 34));
-        panel.setBorder(new TitledBorder(new LineBorder(new Color(173, 216, 230), 2), "Create-Account", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(173, 216, 230)));
         add(panel);
         
         JLabel usernameLabel = new JLabel("Username");
@@ -67,7 +67,7 @@ public class Signup extends JFrame implements ActionListener{
         JLabel accountTypeLabel = new JLabel("Create Account As");
         accountTypeLabel.setForeground(Color.DARK_GRAY);
         accountTypeLabel.setFont(new Font("Tahoma", Font.BOLD, 14));
-        accountTypeLabel.setBounds(100, 170, 140, 20);
+        accountTypeLabel.setBounds(100, 170, 150, 20);
         panel.add(accountTypeLabel);
         
         chooseAccount = new Choice();
@@ -103,21 +103,21 @@ public class Signup extends JFrame implements ActionListener{
         
         
         createButton = new JButton("Create");
-        createButton.setBackground(Color.BLACK);
+        createButton.setBackground(new Color(0,102,27));
         createButton.setForeground(Color.WHITE);
         createButton.setBounds(140, 290, 120, 30);
         createButton.addActionListener(this);
         panel.add(createButton);
         
         backButton = new JButton("Back");
-        backButton.setBackground(Color.BLACK);
+        backButton.setBackground(Color.RED);
         backButton.setForeground(Color.WHITE);
         backButton.setBounds(300, 290, 120, 30);
         backButton.addActionListener(this);
         panel.add(backButton);
         
-        ImageIcon signupIcon = new ImageIcon(Signup.class.getResource("icon/signupImage.png"));
-        Image i2 = signupIcon.getImage().getScaledInstance(250, 250, Image.SCALE_DEFAULT);
+        ImageIcon signupIcon = new ImageIcon(Signup.class.getResource("icon/user.png"));
+        Image i2 = signupIcon.getImage().getScaledInstance(200, 200, Image.SCALE_SMOOTH);
         signupIcon = new ImageIcon(i2);
         JLabel signupImageLabel = new JLabel(signupIcon);
         signupImageLabel.setBounds(450, 30, 250, 250);
