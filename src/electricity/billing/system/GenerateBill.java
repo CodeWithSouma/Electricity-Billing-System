@@ -23,7 +23,8 @@ public class GenerateBill extends JFrame implements ActionListener{
     String meter;
     GenerateBill(String meter){
         this.meter = meter;
-        setSize(500,900);
+        setSize(500,700);
+        this.setResizable(false);
         setLayout(new BorderLayout());
         
         panel = new JPanel();
@@ -48,11 +49,13 @@ public class GenerateBill extends JFrame implements ActionListener{
 
         
         billTextArea = new JTextArea(50,15);
-        billTextArea.setText("\n\n\t-------- Click on the -------\n\t Generate Bill Button to get\n\tThe bill of the Selected Month\n\n");
+        billTextArea.setText("\n\n\t   -------- Click on the -------\n\t Generate Bill Button to get\n\tThe bill of the Selected Month\n\n");
         billTextArea.setFont(new Font("Senserif",Font.PLAIN,18));
         JScrollPane scrollPane = new JScrollPane(billTextArea);
         
         generateBillButton = new JButton("Generate Bill");
+        generateBillButton.setBackground(Color.DARK_GRAY);
+        generateBillButton.setForeground(Color.WHITE);
         
         panel.add(generateBillLabel);
         panel.add(meterNumberLabel);
