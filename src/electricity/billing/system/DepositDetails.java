@@ -9,6 +9,12 @@ import javax.swing.*;
 import java.sql.*;
 import net.proteanit.sql.DbUtils;
 
+/**
+ * @author souma (SMIT)
+ * @version v1.0
+ *
+ */
+
 public class DepositDetails extends JFrame implements ActionListener{
  
     JTable depositeDetailsTable;
