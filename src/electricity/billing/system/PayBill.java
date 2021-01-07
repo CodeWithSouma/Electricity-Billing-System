@@ -23,6 +23,7 @@ public class PayBill extends JFrame implements ActionListener {
     PayBill(String meter) {
         this.meter = meter;
         setLayout(null);
+        this.setResizable(false);
 
         setBounds(550, 220, 900, 600);
 
@@ -129,16 +130,16 @@ public class PayBill extends JFrame implements ActionListener {
         backButton.setBounds(230, 460, 100, 25);
         add(backButton);
 
-        payButton.setBackground(Color.BLACK);
+        payButton.setBackground(new Color(0,102,27));
         payButton.setForeground(Color.WHITE);
         payButton.addActionListener(this);
 
-        backButton.setBackground(Color.BLACK);
+        backButton.setBackground(Color.RED);
         backButton.setForeground(Color.WHITE);
         backButton.addActionListener(this);
 
-        ImageIcon payBillIcon = new ImageIcon(PayBill.class.getResource("icon/bill.png"));
-        Image payBillImage = payBillIcon.getImage().getScaledInstance(600, 300, Image.SCALE_DEFAULT);
+        ImageIcon payBillIcon = new ImageIcon(PayBill.class.getResource("icon/pay_bill_banner_icon.png"));
+        Image payBillImage = payBillIcon.getImage().getScaledInstance(300, 300, Image.SCALE_DEFAULT);
         payBillIcon = new ImageIcon(payBillImage);
         JLabel payBillLabel = new JLabel(payBillIcon);
         payBillLabel.setBounds(400, 120, 600, 300);
