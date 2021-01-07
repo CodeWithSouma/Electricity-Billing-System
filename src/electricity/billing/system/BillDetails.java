@@ -21,6 +21,7 @@ public class BillDetails extends JFrame{
         setSize(700,650);
         setLocation(600,150);
         setLayout(null);
+        this.setResizable(false);
         getContentPane().setBackground(Color.WHITE);
         
         try{
