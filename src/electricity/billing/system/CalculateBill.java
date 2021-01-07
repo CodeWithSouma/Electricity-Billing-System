@@ -22,7 +22,7 @@ public class CalculateBill extends JFrame implements ActionListener{
         
         panel = new JPanel();
         panel.setLayout(null);
-        panel.setBackground(new Color(173, 216, 230));
+        panel.setBackground(new Color(102, 237, 201));
         
         calculateElectricBillLabel = new JLabel("Calculate Electricity Bill");
         calculateElectricBillLabel.setBounds(30, 10, 400, 30);
@@ -93,19 +93,19 @@ public class CalculateBill extends JFrame implements ActionListener{
         
         submitButton = new JButton("Submit");
         submitButton.setBounds(100, 350, 100, 25);
-        submitButton.setBackground(Color.BLACK);
+        submitButton.setBackground(new Color(0,102,27));
         submitButton.setForeground(Color.WHITE);
         
         cancelButton = new JButton("Cancel");
         cancelButton.setBounds(230, 350, 100, 25);
-        cancelButton.setBackground(Color.BLACK);
+        cancelButton.setBackground(Color.RED);
         cancelButton.setForeground(Color.WHITE);
         
         submitButton.addActionListener(this);
         cancelButton.addActionListener(this);
         
-        ImageIcon calculateBillBannerIcon = new ImageIcon(CalculateBill.class.getResource("icon/calculate_bill_banner.jpg"));
-        Image calculateBillBannerImage = calculateBillBannerIcon.getImage().getScaledInstance(180, 270,Image.SCALE_DEFAULT);
+        ImageIcon calculateBillBannerIcon = new ImageIcon(CalculateBill.class.getResource("icon/calculate_bill_banner_img.jpg"));
+        Image calculateBillBannerImage = calculateBillBannerIcon.getImage().getScaledInstance(220, 270,Image.SCALE_AREA_AVERAGING);
         calculateBillBannerIcon = new ImageIcon(calculateBillBannerImage);
         calculateBillBannerLabel = new JLabel(calculateBillBannerIcon);
         
@@ -131,6 +131,7 @@ public class CalculateBill extends JFrame implements ActionListener{
         getContentPane().setBackground(Color.WHITE);        
         setSize(750,500);
         setLocation(550,220);
+        this.setResizable(false);
     }
     
     @Override

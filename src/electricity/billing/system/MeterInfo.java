@@ -24,7 +24,7 @@ public class MeterInfo extends JFrame implements ActionListener{
         
         JPanel panel = new JPanel();
         panel.setLayout(null);
-        panel.setBackground(new Color(122, 255, 224));
+        panel.setBackground(new Color(149, 175, 184));
         
         JLabel headingLabel = new JLabel("Meter Information");
         headingLabel.setBounds(180, 10, 220, 26);
