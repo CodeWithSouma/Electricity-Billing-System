@@ -49,7 +49,7 @@ class SplashFrame extends JFrame implements Runnable {
 
     private void addBackgroundImage() {
         ImageIcon splashIcon = new ImageIcon(SplashFrame.class.getResource("icon/splash_img.jpg"));
-        Image splashImage = splashIcon.getImage().getScaledInstance(730, 550, Image.SCALE_DEFAULT);
+        Image splashImage = splashIcon.getImage().getScaledInstance(730, 550, Image.SCALE_SMOOTH);
         splashIcon = new ImageIcon(splashImage);
 
         JLabel imageLabel = new JLabel(splashIcon);
