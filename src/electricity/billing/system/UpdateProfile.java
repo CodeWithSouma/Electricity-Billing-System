@@ -15,16 +15,17 @@ import java.awt.event.*;
 
 
 public class UpdateProfile extends JFrame implements ActionListener{
-    JTextField addressTextField, cityTextField, stateTextField, emailTextField, phoneTextField, t6, t7;
+    JTextField addressTextField, cityTextField, stateTextField, emailTextField, phoneTextField;
     JLabel nameLabel, meterNumberLabel;
     JButton updateButton, backButton;
     String meter;
     UpdateProfile(String meter){
         this.meter = meter;
         
-        setBounds(500, 220, 1050, 450);
+        setBounds(500, 220, 1000, 450);
         setLayout(null);
         getContentPane().setBackground(Color.WHITE);
+        this.setResizable(false);
         
         JLabel headingLabel = new JLabel("UPDATE CUSTOMER INFORMATION");
         headingLabel.setBounds(110, 0, 400, 30);
@@ -40,7 +41,7 @@ public class UpdateProfile extends JFrame implements ActionListener{
         add(nameLabel);
         
         JLabel meterNumberHeadingLabel = new JLabel("Meter Number");
-        meterNumberHeadingLabel.setBounds(30, 110, 100, 20);
+        meterNumberHeadingLabel.setBounds(30, 110, 120, 20);
         add(meterNumberHeadingLabel);
         
         meterNumberLabel = new JLabel();
@@ -88,14 +89,14 @@ public class UpdateProfile extends JFrame implements ActionListener{
         add(phoneTextField);
         
         updateButton = new JButton("Update");
-        updateButton.setBackground(Color.BLACK);
+        updateButton.setBackground(new Color(0,102,27));
         updateButton.setForeground(Color.WHITE);
         updateButton.setBounds(70, 360, 100, 25);
         updateButton.addActionListener(this);
         add(updateButton);
         
         backButton = new JButton("Back");
-        backButton.setBackground(Color.BLACK);
+        backButton.setBackground(Color.RED);
         backButton.setForeground(Color.WHITE);
         backButton.setBounds(230, 360, 100, 25);
         backButton.addActionListener(this);
@@ -116,12 +117,12 @@ public class UpdateProfile extends JFrame implements ActionListener{
             }
         }catch(SQLException e){}
         
-        ImageIcon updateInformationBannerIcon = new ImageIcon(UpdateProfile.class.getResource("icon/update.jpg"));
-        Image i2  = updateInformationBannerIcon.getImage().getScaledInstance(400, 300, Image.SCALE_DEFAULT);
-        ImageIcon i3 = new ImageIcon(i2);
-        JLabel l8  = new JLabel(i3);
-        l8.setBounds(550, 50, 400, 300);
-        add(l8);
+        ImageIcon updateInformationBannerIcon = new ImageIcon(UpdateProfile.class.getResource("icon/update_info_icon.png"));
+        Image updateInformationBannerImage  = updateInformationBannerIcon.getImage().getScaledInstance(300, 300, Image.SCALE_DEFAULT);
+        updateInformationBannerIcon = new ImageIcon(updateInformationBannerImage);
+        JLabel updateInformationImageLabel  = new JLabel(updateInformationBannerIcon);
+        updateInformationImageLabel.setBounds(550, 50, 400, 300);
+        add(updateInformationImageLabel);
     }
     
     @Override
