@@ -117,8 +117,8 @@ public class Signup extends JFrame implements ActionListener{
         panel.add(backButton);
         
         ImageIcon signupIcon = new ImageIcon(Signup.class.getResource("icon/user.png"));
-        Image i2 = signupIcon.getImage().getScaledInstance(200, 200, Image.SCALE_SMOOTH);
-        signupIcon = new ImageIcon(i2);
+        Image signupImage = signupIcon.getImage().getScaledInstance(200, 200, Image.SCALE_SMOOTH);
+        signupIcon = new ImageIcon(signupImage);
         JLabel signupImageLabel = new JLabel(signupIcon);
         signupImageLabel.setBounds(450, 30, 250, 250);
         panel.add(signupImageLabel);

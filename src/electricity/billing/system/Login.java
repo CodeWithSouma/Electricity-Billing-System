@@ -63,22 +63,24 @@ public class Login extends JFrame implements ActionListener {
         choice.setBounds(400, 100, 150, 20);
         this.add(choice);
         
-        ImageIcon loginIcon = new ImageIcon(Login.class.getResource("icon/login.png"));
-        Image loginImage = loginIcon.getImage().getScaledInstance(16, 16,Image.SCALE_SMOOTH);
-        loginButton = new JButton("Login", new ImageIcon(loginImage));
-        loginButton.setBounds(330, 160, 110, 25);
+        loginButton = new JButton("Login");
+        loginButton.setBounds(330, 160, 100, 25);
+        loginButton.setForeground(Color.WHITE);
+        loginButton.setBackground(new Color(125, 72, 163));
         this.add(loginButton);
         
-        ImageIcon cancelIcon = new ImageIcon(Login.class.getResource("icon/cancel.jpg"));
-        Image cancelImage = cancelIcon.getImage().getScaledInstance(16, 16,Image.SCALE_SMOOTH);
-        cancelButton = new JButton("Cancel",new ImageIcon(cancelImage));
-        cancelButton.setBounds(450, 160, 110, 25);
+
+        cancelButton = new JButton("Cancel");
+        cancelButton.setBackground(Color.RED);
+        cancelButton.setForeground(Color.WHITE);
+        cancelButton.setBounds(450, 160, 100, 25);
         this.add(cancelButton);
         
-        ImageIcon signupIcon = new ImageIcon(Login.class.getResource("icon/user.png"));
-        Image signupImage = signupIcon.getImage().getScaledInstance(16, 16,Image.SCALE_SMOOTH);
-        signupButton = new JButton("Signup",new ImageIcon(signupImage));
-        signupButton.setBounds(380, 200, 110, 25);
+
+        signupButton = new JButton("Signup");
+        signupButton.setBackground(new Color(0,102,27));
+        signupButton.setForeground(Color.WHITE);
+        signupButton.setBounds(380, 200, 100, 25);
         this.add(signupButton);
         
         ImageIcon profileIcon = new ImageIcon(Login.class.getResource("icon/login_banner.png"));
