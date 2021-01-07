@@ -20,11 +20,7 @@ public class Dashboard extends JFrame implements ActionListener {
         setSize(1920, 1030);
 
         /* Adding background image */
-        ImageIcon backgroundImageIcon = new ImageIcon(Dashboard.class.getResource("icon/electricity.jpg"));
-        Image backgroundImage = backgroundImageIcon.getImage().getScaledInstance(1900, 950, Image.SCALE_SMOOTH);
-        backgroundImageIcon = new ImageIcon(backgroundImage);
-        JLabel backgroundImageLabel = new JLabel(backgroundImageIcon);
-        add(backgroundImageLabel);
+        addBackgroundImage(person);
 
         /* First Column */
         JMenuBar menuBar = new JMenuBar();
@@ -238,8 +234,20 @@ public class Dashboard extends JFrame implements ActionListener {
         }
 
     }
+    
+      private void addBackgroundImage(String person) {
+        ImageIcon backgroundImageIcon = 
+                ("Admin".equals(person)) ? new ImageIcon(Dashboard.class.getResource("icon/electricity.jpg")):
+                new ImageIcon(Dashboard.class.getResource("icon/user_dashboard_banner.jpg"));
+        Image backgroundImage = backgroundImageIcon.getImage().getScaledInstance(1900, 950, Image.SCALE_SMOOTH);
+        backgroundImageIcon = new ImageIcon(backgroundImage);
+        JLabel backgroundImageLabel = new JLabel(backgroundImageIcon);
+        add(backgroundImageLabel);
+    }
 
     public static void main(String[] args) {
         new Dashboard("", "").setVisible(true);
     }
+
+  
 }
