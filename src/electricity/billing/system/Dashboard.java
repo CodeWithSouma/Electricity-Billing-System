@@ -21,8 +21,8 @@ public class Dashboard extends JFrame implements ActionListener {
         setSize(1920, 1030);
 
         /* Adding background image */
-        ImageIcon backgroundImageIcon = new ImageIcon(Dashboard.class.getResource("icon/elect1.jpg"));
-        Image backgroundImage = backgroundImageIcon.getImage().getScaledInstance(1900, 950, Image.SCALE_DEFAULT);
+        ImageIcon backgroundImageIcon = new ImageIcon(Dashboard.class.getResource("icon/electricity.jpg"));
+        Image backgroundImage = backgroundImageIcon.getImage().getScaledInstance(1900, 950, Image.SCALE_SMOOTH);
         backgroundImageIcon = new ImageIcon(backgroundImage);
         JLabel backgroundImageLabel = new JLabel(backgroundImageIcon);
         add(backgroundImageLabel);
@@ -152,43 +152,43 @@ public class Dashboard extends JFrame implements ActionListener {
         generateBill.addActionListener(this);
 
         // -----------------------------------------------------------------------------------------------
-        /* Fourth Column*/
-        JMenu utility = new JMenu("Utility");
-        JMenuItem notapadUtility = new JMenuItem("Notepad");
-        JMenuItem calculatorUtility = new JMenuItem("Calculator");
-        JMenuItem webBrowseUtlity = new JMenuItem("Web Browser");
-        utility.setForeground(Color.RED);
-
-        /* ---- Calender ---- */
-        notapadUtility.setFont(new Font("monospaced", Font.PLAIN, 12));
-        ImageIcon notepadIcon = new ImageIcon(Dashboard.class.getResource("icon/notepad_icon.png"));
-        Image notepadImage = notepadIcon.getImage().getScaledInstance(20, 20, Image.SCALE_DEFAULT);
-        notapadUtility.setIcon(new ImageIcon(notepadImage));
-        notapadUtility.setMnemonic('C');
-        notapadUtility.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_C, ActionEvent.CTRL_MASK));
-        notapadUtility.setBackground(Color.WHITE);
-
-        /* ---- Calculator ---- */
-        calculatorUtility.setFont(new Font("monospaced", Font.PLAIN, 12));
-        ImageIcon calculatorIcon = new ImageIcon(Dashboard.class.getResource("icon/calculator_icon.png"));
-        Image calculatorImage = calculatorIcon.getImage().getScaledInstance(20, 20, Image.SCALE_DEFAULT);
-        calculatorUtility.setIcon(new ImageIcon(calculatorImage));
-        calculatorUtility.setMnemonic('X');
-        calculatorUtility.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_X, ActionEvent.CTRL_MASK));
-        calculatorUtility.setBackground(Color.WHITE);
-
-        /* ---- Web Browser ---- */
-        webBrowseUtlity.setFont(new Font("monospaced", Font.PLAIN, 12));
-        ImageIcon webBrowserIcon = new ImageIcon(Dashboard.class.getResource("icon/web_browser_icon.png"));
-        Image webBrowserImage = webBrowserIcon.getImage().getScaledInstance(20, 20, Image.SCALE_DEFAULT);
-        webBrowseUtlity.setIcon(new ImageIcon(webBrowserImage));
-        webBrowseUtlity.setMnemonic('W');
-        webBrowseUtlity.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_W, ActionEvent.CTRL_MASK));
-        webBrowseUtlity.setBackground(Color.WHITE);
-
-        notapadUtility.addActionListener(this);
-        calculatorUtility.addActionListener(this);
-        webBrowseUtlity.addActionListener(this);
+//        /* Fourth Column*/
+//        JMenu utility = new JMenu("Utility");
+//        JMenuItem notapadUtility = new JMenuItem("Notepad");
+//        JMenuItem calculatorUtility = new JMenuItem("Calculator");
+//        JMenuItem webBrowseUtlity = new JMenuItem("Web Browser");
+//        utility.setForeground(Color.RED);
+//
+//        /* ---- Calender ---- */
+//        notapadUtility.setFont(new Font("monospaced", Font.PLAIN, 12));
+//        ImageIcon notepadIcon = new ImageIcon(Dashboard.class.getResource("icon/notepad_icon.png"));
+//        Image notepadImage = notepadIcon.getImage().getScaledInstance(20, 20, Image.SCALE_DEFAULT);
+//        notapadUtility.setIcon(new ImageIcon(notepadImage));
+//        notapadUtility.setMnemonic('C');
+//        notapadUtility.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_C, ActionEvent.CTRL_MASK));
+//        notapadUtility.setBackground(Color.WHITE);
+//
+//        /* ---- Calculator ---- */
+//        calculatorUtility.setFont(new Font("monospaced", Font.PLAIN, 12));
+//        ImageIcon calculatorIcon = new ImageIcon(Dashboard.class.getResource("icon/calculator_icon.png"));
+//        Image calculatorImage = calculatorIcon.getImage().getScaledInstance(20, 20, Image.SCALE_DEFAULT);
+//        calculatorUtility.setIcon(new ImageIcon(calculatorImage));
+//        calculatorUtility.setMnemonic('X');
+//        calculatorUtility.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_X, ActionEvent.CTRL_MASK));
+//        calculatorUtility.setBackground(Color.WHITE);
+//
+//        /* ---- Web Browser ---- */
+//        webBrowseUtlity.setFont(new Font("monospaced", Font.PLAIN, 12));
+//        ImageIcon webBrowserIcon = new ImageIcon(Dashboard.class.getResource("icon/web_browser_icon.png"));
+//        Image webBrowserImage = webBrowserIcon.getImage().getScaledInstance(20, 20, Image.SCALE_DEFAULT);
+//        webBrowseUtlity.setIcon(new ImageIcon(webBrowserImage));
+//        webBrowseUtlity.setMnemonic('W');
+//        webBrowseUtlity.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_W, ActionEvent.CTRL_MASK));
+//        webBrowseUtlity.setBackground(Color.WHITE);
+//
+//        notapadUtility.addActionListener(this);
+//        calculatorUtility.addActionListener(this);
+//        webBrowseUtlity.addActionListener(this);
 
         // ---------------------------------------------------------------------------------------
         /*Fifth Column */
@@ -221,9 +221,9 @@ public class Dashboard extends JFrame implements ActionListener {
 
         report.add(generateBill);
 
-        utility.add(notapadUtility);
-        utility.add(calculatorUtility);
-        utility.add(webBrowseUtlity);
+//        utility.add(notapadUtility);
+//        utility.add(calculatorUtility);
+//        utility.add(webBrowseUtlity);
 
         exit.add(logout);
 
@@ -234,7 +234,7 @@ public class Dashboard extends JFrame implements ActionListener {
             menuBar.add(user);
             menuBar.add(report);
         }
-        menuBar.add(utility);
+//        menuBar.add(utility);
         menuBar.add(exit);
 
         setJMenuBar(menuBar);
@@ -260,24 +260,24 @@ public class Dashboard extends JFrame implements ActionListener {
             case "Pay Bill":
                 new PayBill(meter).setVisible(true);
                 break;
-            case "Notepad":
-                try {
-                Runtime.getRuntime().exec("notepad.exe");
-            } catch (IOException e) {
-            }
-            break;
-            case "Calculator":
-                try {
-                Runtime.getRuntime().exec("calc.exe");
-            } catch (IOException e) {
-            }
-            break;
-            case "Web Browser":
-                try {
-                Runtime.getRuntime().exec("C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe");
-            } catch (IOException e) {
-            }
-            break;
+//            case "Notepad":
+//                try {
+//                Runtime.getRuntime().exec("notepad.exe");
+//            } catch (IOException e) {
+//            }
+//            break;
+//            case "Calculator":
+//                try {
+//                Runtime.getRuntime().exec("calc.exe");
+//            } catch (IOException e) {
+//            }
+//            break;
+//            case "Web Browser":
+//                try {
+//                Runtime.getRuntime().exec("C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe");
+//            } catch (IOException e) {
+//            }
+//            break;
             case "Logout":
                 this.setVisible(false);
                 new Login().setVisible(true);
