@@ -22,9 +22,10 @@ public class DepositDetails extends JFrame implements ActionListener{
         setLocation(600,150);
         setLayout(null);
         getContentPane().setBackground(Color.WHITE);
+        this.setResizable(false);
         
         meterNumberLabel = new JLabel("Sort by Meter Number");
-        meterNumberLabel.setBounds(20, 20, 150, 20);
+        meterNumberLabel.setBounds(20, 20, 170, 20);
         add(meterNumberLabel);
         
         meterChooser = new Choice();
@@ -53,7 +54,7 @@ public class DepositDetails extends JFrame implements ActionListener{
             e.printStackTrace();
         }
         
-        meterChooser.setBounds(180,20, 150, 20);
+        meterChooser.setBounds(190,20, 150, 20);
         add(meterChooser);
         
         
@@ -74,13 +75,17 @@ public class DepositDetails extends JFrame implements ActionListener{
         
         
         searchButton = new JButton("Search");
-        searchButton.setBounds(20, 70, 80, 20);
+        searchButton.setBounds(20, 70, 90, 20);
+        searchButton.setBackground(new Color(0,102,27));
+        searchButton.setForeground(Color.WHITE);
         searchButton.addActionListener(this);
         add(searchButton);
         
         printButton = new JButton("Print");
         printButton.setBounds(120, 70, 80, 20);
         printButton.addActionListener(this);
+        printButton.setBackground(new Color(125, 72, 163));
+        printButton.setForeground(Color.WHITE);
         add(printButton);
         
         JScrollPane scrollPane = new JScrollPane(depositeDetailsTable);
