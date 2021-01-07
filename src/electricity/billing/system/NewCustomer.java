@@ -20,6 +20,7 @@ public class NewCustomer extends JFrame implements ActionListener {
     NewCustomer() {
         setLocation(600, 200);
         setSize(700, 500);
+        this.setTitle("New Customer");
         this.setResizable(false);
 
         JPanel panel = new JPanel();
