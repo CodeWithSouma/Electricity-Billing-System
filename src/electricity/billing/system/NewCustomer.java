@@ -20,11 +20,12 @@ public class NewCustomer extends JFrame implements ActionListener {
     NewCustomer() {
         setLocation(600, 200);
         setSize(700, 500);
+        this.setResizable(false);
 
         JPanel panel = new JPanel();
         panel.setLayout(null);
         panel.setBackground(Color.WHITE);
-        panel.setBackground(new Color(173, 216, 230));
+        panel.setBackground(new Color(252, 202, 0));
 
         JLabel heading = new JLabel("New Customer");
         heading.setBounds(180, 10, 200, 26);
@@ -80,7 +81,7 @@ public class NewCustomer extends JFrame implements ActionListener {
         panel.add(emailTextField);
 
         phoneNumberLabel = new JLabel("Phone Number");
-        phoneNumberLabel.setBounds(100, 320, 100, 20);
+        phoneNumberLabel.setBounds(100, 320, 120, 20);
 
         phoneNumberTextField = new JTextField();
         phoneNumberTextField.setBounds(240, 320, 200, 20);
@@ -89,12 +90,12 @@ public class NewCustomer extends JFrame implements ActionListener {
 
         nextButton = new JButton("Next");
         nextButton.setBounds(120, 390, 100, 25);
-        nextButton.setBackground(Color.BLACK);
+        nextButton.setBackground(new Color(0,102,27));
         nextButton.setForeground(Color.WHITE);
 
         cancelButton = new JButton("Cancel");
         cancelButton.setBounds(250, 390, 100, 25);
-        cancelButton.setBackground(Color.BLACK);
+        cancelButton.setBackground(Color.RED);
         cancelButton.setForeground(Color.WHITE);
 
         panel.add(nextButton);
@@ -103,8 +104,8 @@ public class NewCustomer extends JFrame implements ActionListener {
 
         add(panel, "Center");
 
-        ImageIcon newCustomerIcon = new ImageIcon(NewCustomer.class.getResource("icon/new_customer_icon.jpg"));
-        Image newCustomerImage = newCustomerIcon.getImage().getScaledInstance(150, 300, Image.SCALE_DEFAULT);
+        ImageIcon newCustomerIcon = new ImageIcon(NewCustomer.class.getResource("icon/new_customer_image.jpg"));
+        Image newCustomerImage = newCustomerIcon.getImage().getScaledInstance(200, 300, Image.SCALE_AREA_AVERAGING);
         newCustomerIcon = new ImageIcon(newCustomerImage);
         newCustomerImageLabel = new JLabel(newCustomerIcon);
         add(newCustomerImageLabel, "West");
