@@ -24,7 +24,7 @@ public class UpdateProfile extends JFrame implements ActionListener{
         
         setBounds(500, 220, 1000, 450);
         setLayout(null);
-        getContentPane().setBackground(Color.WHITE);
+        getContentPane().setBackground(new Color(245, 190, 81));
         this.setResizable(false);
         
         JLabel headingLabel = new JLabel("UPDATE CUSTOMER INFORMATION");
