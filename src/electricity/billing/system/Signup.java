@@ -6,7 +6,6 @@ package electricity.billing.system;
  *
  */
 import javax.swing.*;
-import javax.swing.border.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.sql.SQLException;
@@ -80,7 +79,7 @@ public class Signup extends JFrame implements ActionListener{
         JLabel meteNumberLabel = new JLabel("Meter Number");
         meteNumberLabel.setForeground(Color.DARK_GRAY);
         meteNumberLabel.setFont(new Font("Tahoma", Font.BOLD, 14));
-        meteNumberLabel.setBounds(100, 210, 100, 20);
+        meteNumberLabel.setBounds(100, 210, 120, 20);
         meteNumberLabel.setVisible(false);
         panel.add(meteNumberLabel);
         
