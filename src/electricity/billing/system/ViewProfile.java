@@ -16,8 +16,9 @@ import java.awt.event.*;
 public class ViewProfile extends JFrame implements ActionListener{
     
     ViewProfile(String meter){
-        setBounds(600,250, 850, 650);
-        getContentPane().setBackground(Color.WHITE);
+        setBounds(550,250, 830, 450);
+        getContentPane().setBackground(new Color(245, 81, 152));
+        this.setResizable(false);
         setLayout(null);
         
         JLabel headingLabel = new JLabel("VIEW CUSTOMER INFORMATION");
@@ -34,7 +35,7 @@ public class ViewProfile extends JFrame implements ActionListener{
         add(nameLabel);
         
         JLabel meterNumberHeadingLabel = new JLabel("Meter Number");
-        meterNumberHeadingLabel.setBounds(70, 140, 100, 20);
+        meterNumberHeadingLabel.setBounds(70, 140, 120, 20);
         add(meterNumberHeadingLabel);
         
         JLabel meterNumberLabel = new JLabel();
@@ -98,18 +99,11 @@ public class ViewProfile extends JFrame implements ActionListener{
         
         JButton backButton;
         backButton = new JButton("Back");
-        backButton.setBackground(Color.BLACK);
+        backButton.setBackground(Color.RED);
         backButton.setForeground(Color.WHITE);
         backButton.setBounds(350, 340, 100, 25);
         backButton.addActionListener(this);
         add(backButton);
-        
-        ImageIcon viewCustomerBannerIcon = new ImageIcon(ViewProfile.class.getResource("icon/viewcustomer.jpg"));
-        Image viewCustomerBannerImage = viewCustomerBannerIcon.getImage().getScaledInstance(600, 300, Image.SCALE_DEFAULT);
-        viewCustomerBannerIcon = new ImageIcon(viewCustomerBannerImage);
-        JLabel viewCustomerBannerImageLabel  = new JLabel(viewCustomerBannerIcon);
-        viewCustomerBannerImageLabel.setBounds(20, 350, 600, 300);
-        add(viewCustomerBannerImageLabel);
     }
     
     @Override
