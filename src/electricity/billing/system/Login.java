@@ -35,6 +35,7 @@ public class Login extends JFrame implements ActionListener {
 
     private void initComponent() {
         this.setTitle("Login Page");
+        this.setResizable(false);
         getContentPane().setBackground(Color.WHITE);
         
         usernameLabel = new JLabel("Username");

@@ -24,12 +24,12 @@ public class Dashboard extends JFrame implements ActionListener {
 
         /* First Column */
         JMenuBar menuBar = new JMenuBar();
-        JMenu master = new JMenu("Master");
+        JMenu adminMenu = new JMenu("Admin");
         JMenuItem newCustomer = new JMenuItem("New Customer");
         JMenuItem customerDetails = new JMenuItem("Customer Details");
         JMenuItem depositDetails = new JMenuItem("Deposit Details");
         JMenuItem calculateBill = new JMenuItem("Calculate Bill");
-        master.setForeground(Color.BLUE);
+        
 
         /* ---- Customer Details ---- */
         newCustomer.setFont(new Font("monospaced", Font.PLAIN, 12));
@@ -77,7 +77,6 @@ public class Dashboard extends JFrame implements ActionListener {
         JMenuItem updateInfo = new JMenuItem("Update profile");
         JMenuItem viewInfo = new JMenuItem("View profile");
 
-        info.setForeground(Color.RED);
 
         /* ---- Pay Bill ---- */
         updateInfo.setFont(new Font("monospaced", Font.PLAIN, 12));
@@ -106,11 +105,11 @@ public class Dashboard extends JFrame implements ActionListener {
         JMenuItem payBill = new JMenuItem("Pay Bill");
 
         JMenuItem billDetails = new JMenuItem("Bill Details");
-        user.setForeground(Color.RED);
+       
 
         /* ---- Pay Bill ---- */
         payBill.setFont(new Font("monospaced", Font.PLAIN, 12));
-        ImageIcon payBillIcon = new ImageIcon(Dashboard.class.getResource("icon/update_info_icon.png"));
+        ImageIcon payBillIcon = new ImageIcon(Dashboard.class.getResource("icon/pay_bill_menu_icon.png"));
         Image payBillImage = payBillIcon.getImage().getScaledInstance(20, 20, Image.SCALE_DEFAULT);
         payBill.setIcon(new ImageIcon(payBillImage));
         payBill.setMnemonic('P');
@@ -119,7 +118,7 @@ public class Dashboard extends JFrame implements ActionListener {
 
         /* ---- Last Bill ----*/
         billDetails.setFont(new Font("monospaced", Font.PLAIN, 12));
-        ImageIcon lastBillIcon = new ImageIcon(Dashboard.class.getResource("icon/view_info_icon.png"));
+        ImageIcon lastBillIcon = new ImageIcon(Dashboard.class.getResource("icon/bill_details_menu_icon.png"));
         Image lastBillImage = lastBillIcon.getImage().getScaledInstance(20, 20, Image.SCALE_DEFAULT);
         billDetails.setIcon(new ImageIcon(lastBillImage));
         billDetails.setMnemonic('L');
@@ -133,11 +132,10 @@ public class Dashboard extends JFrame implements ActionListener {
         /* Third Column*/
         JMenu report = new JMenu("Report");
         JMenuItem generateBill = new JMenuItem("Generate Bill");
-        report.setForeground(Color.BLUE);
 
         /* ---- Report ---- */
         generateBill.setFont(new Font("monospaced", Font.PLAIN, 12));
-        ImageIcon generateBillIcon = new ImageIcon(Dashboard.class.getResource("icon/generate_bill_icon.png"));
+        ImageIcon generateBillIcon = new ImageIcon(Dashboard.class.getResource("icon/generate_bill_menu_icon.png"));
         Image image7 = generateBillIcon.getImage().getScaledInstance(20, 20, Image.SCALE_DEFAULT);
         generateBill.setIcon(new ImageIcon(image7));
         generateBill.setMnemonic('R');
@@ -149,11 +147,10 @@ public class Dashboard extends JFrame implements ActionListener {
         /*Fifth Column */
         JMenu exit = new JMenu("Logout");
         JMenuItem logout = new JMenuItem("Logout");
-        exit.setForeground(Color.BLUE);
 
         /* ---- Exit ---- */
         logout.setFont(new Font("monospaced", Font.PLAIN, 12));
-        ImageIcon logoutIcon = new ImageIcon(Dashboard.class.getResource("icon/logout_icon.png"));
+        ImageIcon logoutIcon = new ImageIcon(Dashboard.class.getResource("icon/logout_menu_icon.png"));
         Image logoutImage = logoutIcon.getImage().getScaledInstance(20, 20, Image.SCALE_DEFAULT);
         logout.setIcon(new ImageIcon(logoutImage));
         logout.setMnemonic('Z');
@@ -163,10 +160,10 @@ public class Dashboard extends JFrame implements ActionListener {
         logout.addActionListener(this);
 
         // ---------------------------------------------------------------------------------------------
-        master.add(newCustomer);
-        master.add(customerDetails);
-        master.add(depositDetails);
-        master.add(calculateBill);
+        adminMenu.add(newCustomer);
+        adminMenu.add(customerDetails);
+        adminMenu.add(depositDetails);
+        adminMenu.add(calculateBill);
 
         info.add(updateInfo);
         info.add(viewInfo);
@@ -179,7 +176,7 @@ public class Dashboard extends JFrame implements ActionListener {
         exit.add(logout);
 
         if (person.equals("Admin")) {
-            menuBar.add(master);
+            menuBar.add(adminMenu);
         } else {
             menuBar.add(info);
             menuBar.add(user);
@@ -237,9 +234,9 @@ public class Dashboard extends JFrame implements ActionListener {
     
       private void addBackgroundImage(String person) {
         ImageIcon backgroundImageIcon = 
-                ("Admin".equals(person)) ? new ImageIcon(Dashboard.class.getResource("icon/electricity.jpg")):
-                new ImageIcon(Dashboard.class.getResource("icon/user_dashboard_banner.jpg"));
-        Image backgroundImage = backgroundImageIcon.getImage().getScaledInstance(1900, 950, Image.SCALE_SMOOTH);
+                ("Admin".equals(person)) ? new ImageIcon(Dashboard.class.getResource("icon/electricity_admin_dashboard_banner.jpg")):
+                new ImageIcon(Dashboard.class.getResource("icon/electricity_user_banner.jpg"));
+        Image backgroundImage = backgroundImageIcon.getImage().getScaledInstance(1900, 950, Image.SCALE_AREA_AVERAGING);
         backgroundImageIcon = new ImageIcon(backgroundImage);
         JLabel backgroundImageLabel = new JLabel(backgroundImageIcon);
         add(backgroundImageLabel);

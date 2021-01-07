@@ -23,6 +23,7 @@ public class Signup extends JFrame implements ActionListener{
     
     private void initComponant() {
         this.setTitle("Create Account");
+        this.setResizable(false);
         setBounds(600, 250, 700, 400);
         
         panel = new JPanel();
