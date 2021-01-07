@@ -215,7 +215,7 @@ public class Dashboard extends JFrame implements ActionListener {
                 new PayBill(meter).setVisible(true);
                 break;
             case "Logout":
-                this.setVisible(false);
+                this.dispose();
                 new Login().setVisible(true);
                 break;
             case "Generate Bill":
