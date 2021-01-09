@@ -37,6 +37,7 @@ public class CustomerDetails extends JFrame implements ActionListener{
         
         printButton = new JButton("Print");
         printButton.setBackground(Color.DARK_GRAY);
+        printButton.setForeground(Color.WHITE);
         add(printButton,"South");
         JScrollPane sp = new JScrollPane(customerTable);
         add(sp);
