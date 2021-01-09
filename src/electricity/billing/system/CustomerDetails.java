@@ -1,6 +1,7 @@
 
 package electricity.billing.system;
 
+import java.awt.Color;
 import java.awt.event.*;
 import java.awt.print.PrinterException;
 import javax.swing.*;
@@ -35,6 +36,7 @@ public class CustomerDetails extends JFrame implements ActionListener{
         
         
         printButton = new JButton("Print");
+        printButton.setBackground(Color.DARK_GRAY);
         add(printButton,"South");
         JScrollPane sp = new JScrollPane(customerTable);
         add(sp);
